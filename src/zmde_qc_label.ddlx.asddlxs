@@ -1,0 +1,44 @@
+@Metadata.layer: #CORE
+@UI.headerInfo:{
+    typeName: 'QC Slip',
+    typeNamePlural: 'QC Slip',
+    title:{ type: #STANDARD, value: 'InspectionLot' } }
+annotate entity ZC_QC_LABEL
+    with 
+{
+ @UI.facet: [{ id : 'InspectionLot',
+  purpose: #STANDARD,
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'QC Slip',
+   position: 10 }]
+   
+    @UI.lineItem:       [{ position: 10, label: 'InspectionLot' },{ type: #FOR_ACTION , dataAction: 'ZPRINT', label: 'Generate Print'}]
+  @UI.identification: [{ position: 10, label: 'InspectionLot' }]
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.valueHelpDefinition: [{
+  entity: { name: 'ZI_QC_LABEL_VH', element: 'InspectionLot' }
+}]
+   InspectionLot;
+       @UI.lineItem:       [{ position: 20, label: 'Material' }]
+  @UI.identification: [{ position: 20, label: 'Material' }]
+    @UI.selectionField: [{ position: 20 }]
+  @Consumption.valueHelpDefinition: [{
+  entity: { name: 'ZI_QC_LABEL_VH', element: 'Material' }
+}]
+   Material;
+          @UI.lineItem:       [{ position: 30, label: 'Material Description' }]
+  @UI.identification: [{ position: 30, label: 'Material Description' }]
+    @UI.selectionField: [{ position: 30 }]
+  @Consumption.valueHelpDefinition: [{
+  entity: { name: 'ZI_QC_LABEL_VH', element: 'ProductDescription' }
+}]
+   ProductDescription;
+@UI.lineItem:       [{ position: 40, label: 'Batch' }]
+  @UI.identification: [{ position: 40, label: 'Batch' }]
+    @UI.selectionField: [{ position: 40 }]
+ @Consumption.valueHelpDefinition: [{
+  entity: { name: 'ZI_QC_LABEL_VH', element: 'Batch' }
+}]
+Batch;
+    
+}

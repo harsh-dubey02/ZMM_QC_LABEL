@@ -1,0 +1,22 @@
+managed implementation in class zbp_i_qc_label unique;
+strict ( 2 );
+
+define behavior for ZI_QC_LABEL alias ZI_QC_LABEL_DOC
+with unmanaged save
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  action ( features : instance ) ZPRINT result [1] $self;
+  update;
+  field ( readonly ) InspectionLot;
+
+  mapping for ztb_qc_label
+    {
+      InspectionLot = InspectionLot;
+      base64        = base64;
+    }
+
+
+
+}

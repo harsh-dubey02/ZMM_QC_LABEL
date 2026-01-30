@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "QC Label"
+  },
+  "ui5AppDetails": {
+    "appId": "zppqclabel"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_313EF5C59AF5E1BF73205FA024CEA8BECC0882F5_TM",
+    "semanticObject": "zmm_qc_label",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_313EF5C59AF5E1BF73205FA024CEA8BECC0882F5_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "QC Label",
+        "icon": "sap-icon://legend"
+      }
+    }
+  ]
+}

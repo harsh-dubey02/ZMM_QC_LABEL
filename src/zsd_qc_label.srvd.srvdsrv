@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition for qc label'
+define service ZSD_QC_LABEL {
+  expose ZC_QC_LABEL;
+}
